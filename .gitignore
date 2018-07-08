@@ -2,4 +2,5 @@ vendor/
 deploy/
 *.lock
 serverless-deploy_*.yaml
+streaming_audio_skill
 
