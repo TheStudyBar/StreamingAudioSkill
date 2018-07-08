@@ -4,9 +4,12 @@ Resources:
   HelloLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: hello
+      Handler: streaming_audio_skill
       Runtime: go1.x
-      CodeUri: ./deploy/hello.zip
+      CodeUri: ./deploy/streaming_audio_skill.zip
       Environment:
         Variables: 
           S3_BUCKET: tsbalexaskills
+      Events:
+        AlexaSkillEvent:
+          Type: AlexaSkill
